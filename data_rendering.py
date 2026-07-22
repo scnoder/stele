@@ -2,10 +2,13 @@ import yt_dlp
 import os
 
 import whisper
+
 model = whisper.load_model("base")
+
+
 def download_video(url: str) -> str:
     filename = "audio"
-    
+
     options = {
         "format": "bestaudio/best",
         "outtmpl": f"{filename}.%(ext)s",
@@ -23,6 +26,7 @@ def download_video(url: str) -> str:
 
     return "audio.mp3"
 
+
 def transcribe(file_path: str):
     try:
         print("File passed to Whisper:", file_path)
@@ -36,9 +40,5 @@ def transcribe(file_path: str):
     except Exception as e:
         return {
             "error": str(e),
-            "message": "Sorry, there was an error processing the video."
+            "message": "Sorry, there was an error processing the video.",
         }
-
-text = transcribe("audio.webm")
-print(text)
-# transcribe("https://www.instagram.com/reel/DJomIvfzJmB/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==")
