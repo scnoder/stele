@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stele</title>
+</head>
+
+<body>
+    <header>
+        <h1>Stele</h1>
+        <p>Paste a YouTube or Instagram URL to get an AI-powered analysis</p>
+    </header>
+
+    <div class="card">
+        <div class="input-row">
+            <input type="text" id="urlInput" placeholder="https://www.youtube.com/watch?v=..." />
+            <button id="analyzeBtn" onclick="analyze()">Analyze</button>
+        </div>
+        <div class="status" id="status">⏳ Downloading &amp; transcribing — this may take a minute…</div>
+
+        <div class="result-section" id="analysisSection">
+            <h2>Analysis</h2>
+            <div class="result-box" id="analysisBox"></div>
+        </div>
+
+        <div class="result-section" id="transcriptSection">
+            <details>
+                <summary>
+                    <button class="transcript-toggle">Show transcript</button>
+                </summary>
+                <div class="result-box" id="transcriptBox"></div>
+            </details>
+        </div>
+    </div>
+</body>
+
+</html>
