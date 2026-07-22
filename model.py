@@ -30,7 +30,7 @@ def run_model(transcript: str, video_url: str) -> str:
     session = new_session(transcript, video_url)
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-veratile",
+        model="llama-3.3-70b-versatile",
         messages=[
             {"role": "system", "content": f"""
              Please provide detailed information about the video at {video_url} based on the following transcript: {transcript}.
