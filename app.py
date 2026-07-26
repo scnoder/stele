@@ -9,6 +9,8 @@ import os
 
 app = Flask(__name__)
 
+api_key = os.getenv("GROQ_API_KEY")
+
 
 @app.route("/")
 def index():
