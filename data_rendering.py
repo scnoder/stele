@@ -42,3 +42,6 @@ def transcribe(file_path: str):
             "error": str(e),
             "message": "Sorry, there was an error processing the video.",
         }
+    finally:
+        if os.path.exists(file_path):
+            os.remove(file_path)
