@@ -30,7 +30,7 @@ async function analyze() {
             analysisBox.className = 'result-box error';
             analysisBox.textContent = data.error;
         } else {
-            analysisBox.textContent = data.result;
+            analysisBox.innerHTML = marked.parse(data.result);
             if (data.transcript) {
                 transcriptSection.style.display = 'block';
                 transcriptBox.textContent = data.transcript;
