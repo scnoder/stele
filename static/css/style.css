@@ -44,6 +44,7 @@ header p {
     padding: 2rem;
     width: 100%;
     max-width: 700px;
+    margin: 2rem auto 0;
 }
 
 .input-row {
@@ -153,4 +154,57 @@ details summary {
 
 details .result-box {
     margin-top: 0.6rem;
+}
+
+.hero-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.hero-left {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-right {
+    flex: 1;
+    background: #18181f;
+    border: 1px solid #2a2a38;
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: left;
+}
+
+.hero-right h3 {
+    color: #7c5cf6;
+    margin-bottom: 0.75rem;
+}
+
+.hero-right ul {
+    margin-top: 0.75rem;
+    padding-left: 1.2rem;
+}
+
+.hero-right li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 800px) {
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+}
+
+
+a {
+    color: #7c5cf6;
+    text-decoration: none;
+    
 }
