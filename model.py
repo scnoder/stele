@@ -38,7 +38,7 @@ def run_model(transcript: str, video_url: str) -> str:
                 "content": f"""
              Please provide detailed information about the video at {video_url} based on the following transcript: {transcript}.
              Use the information from the video to summarize what the video says and any additional and useful information related to the video IN UNDER 100 WORDS.
-             Please provide your response in a clear and organized manner, using headings, bullet points, and any other formatting that enhances readability. Also give links to any related videos or articles that you think would be useful to the user. Make SURE that 
+             Please provide your response in a clear and organized manner, using headings, bullet points, and any other formatting that enhances readability. GIVE recommend types of resources or well-known organizations where someone should continue their search. These can include other videos, websites, or books.
              """,
             },
             {"role": "user", "content": transcript},
